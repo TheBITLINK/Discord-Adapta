@@ -1,0 +1,244 @@
+.new-messages-bar, .jump-to-present-bar {
+  left: 0!important;
+  right: 0!important;
+  border-radius: 0!important;
+}
+
+.new-messages-bar {
+  background: rgba(14,161,182, .75)!important;
+}
+
+.guild-header, .guild-header header, .title-wrap, .private-channels .search-bar, .friends-header {
+  background: #13191C!important;
+  min-height: 48px!important;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 48px!important;
+  border: none!important;
+  border-radius: 0;
+}
+
+.guild-header span {
+  line-height: 32px!important;
+}
+
+.header-toolbar button.active, .bot-tags {
+  background: #0EA1B6!important;
+}
+
+.guilds-wrapper {
+  background: #13191C!important;
+}
+
+.guild-channels, .private-channels {
+  background: #232D32!important;
+}
+
+.scroller.guild-channels {
+  padding-top: 0!important;
+}
+
+.new-messages-indicator {
+  font-size: 0!important;
+}
+
+.new-messages-indicator {
+  background: rgba(14,161,182,.75)!important;
+}
+
+.new-messages-indicator-channel:not(.bottom) {
+  top: 48px!important;
+}
+
+.new-messages-indicator span {
+  margin: 0;
+}
+
+.guild.unread:not(.selected):before {
+  width: 10px!important;
+  height: 10px!important;
+  background: #0EA1B6!important;
+  box-shadow: 0 0 0 4px rgba(14,161,182,.25);
+}
+
+.guild.selected::before {
+  background: #0EA1B6!important;
+  width: 9px!important;
+  border-radius: 0!important
+}
+
+.channel-text.selected, .private-channels .channel.selected, .channel-text:hover, .search-result.selected, .search-result:hover, .private-channels .channel:hover, .member:hover, .member.popout-open {
+  background: none!important;
+}
+
+.channel-text.selected:before, .private-channels .channel.selected:before {
+  border-left-color: #0EA1B6!important;
+}
+
+.channel-text.unread:not(.channel-muted):not(.selected):before, .private-channels .channel.unread:not(.channel-muted):not(.selected):before {
+  width: 10px!important;
+  height: 10px!important;
+  background: #0EA1B6!important;
+  box-shadow: 0 0 0 4px rgba(14,161,182,.25);
+}
+
+.badge, .toolbar-badge, .tab-bar-item-primary {
+  box-shadow: none!important;
+  background: #0EA1B6!important;
+  border-color: #13191C!important;
+}
+
+.tab-bar-item-primary .badge {
+  background: #13191C!important;
+  color: #0EA1B6!important;
+}
+
+.active .guild-inner, .selected .guild-inner, .guild:hover .guild-inner {
+  background-color: #0EA1B6!important; 
+}
+
+body {
+  background: #273239 url(https://cdn.discordapp.com/attachments/213567259782807553/252944461116604416/unknown.png) no-repeat!important;
+  background-position: right bottom!important;
+  background-size: cover!important;
+  background-attachment: fixed!important;
+}
+
+.messages-wrapper, .chat>.content, .chat, .divider-red>span, .messages-wrapper .messages .divider:before, #friends, .friends-table {
+  background-color: transparent!important;
+}
+
+.chat .typing {
+  background: transparent!important;
+  bottom: -4px;
+  padding-left: 4px;
+}
+
+.divider.divider-red>div {
+  background: #0EA1B6!important;
+}
+
+.divider-red>span {
+  color: #0EA1B6!important;
+}
+
+.theme-dark .chat form {
+  border: none!important;
+  box-shadow: none!important;
+  background: rgba(0,0,0,.2);
+  margin: 0
+}
+
+.channel-textarea {
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+.channel-textarea-inner {
+  border: none;
+  border-radius: 0;
+  background-color: transparent!important;
+}
+
+.channel-textarea-inner .channel-textarea-upload {
+  border-right: none;
+}
+
+.account {
+  background: #1F282E;
+  border: none;
+  height: 62px!important;
+}
+
+#voice-connection {
+  background: #1F282E;
+  border: none;
+}
+
+.account .btn, #voice-connection .btn {
+  background: rgba(0,0,0,.2);
+}
+.account .btn, .account .btn-group, .account .btn::before, .account .btn::after, #voice-connection .btn, #voice-connection .btn::after, #voice-connection .btn::before, #voice-connection .btn-group {
+  border-color: transparent!important;
+  box-shadow: none!important;
+}
+
+.channel-members {
+  background: rgba(0,0,0,.2)!important;
+}
+
+.chat .scroller::-webkit-scrollbar-button, .chat .scroller::-webkit-scrollbar-track-piece, .friends-table .scroller::-webkit-scrollbar-button, .friends-table .scroller::-webkit-scrollbar-track-piece {
+  background-color: transparent!important;
+  border: transparent!important;
+}
+
+.chat .scroller::-webkit-scrollbar-button, .friends-table .scroller::-webkit-scrollbar-button {
+  height: 0!important;
+}
+
+.chat .scroller::-webkit-scrollbar-thumb, .friends-table .scroller::-webkit-scrollbar-thumb {
+  border-color: transparent!important;
+}
+
+.friends-row:hover {
+  background: none!important;
+  box-shadow: none!important;
+}
+
+.friends-row {
+  border-color: transparent!important;
+}
+
+.friends-action {
+  background-color: rgba(0,0,0,.2)!important;
+}
+
+code, pre, .messages-popout .message-group, .invite-button {
+  background: rgba(0,0,0,.1)!important;
+}
+
+pre, .messages-popout .message-group, .invite-button {
+  border-color: rgba(0,0,0,.2)!important;
+}
+
+.embed {
+  background: rgba(0,0,0,.05)!important;
+  border-color: rgba(0,0,0,.1)!important;
+}
+
+.themed-popout .header {
+  background: #13191C!important;
+}
+
+.channel-textarea-autocomplete-inner header {
+  background: #13191C!important;
+  border-bottom: none!important;
+}
+
+.themed-popout, .channel-textarea-autocomplete-inner {
+  background: #1F282E!important;
+  border: none!important;
+  border-radius: 0!important;
+  border-bottom: 4px solid transparent!important;
+}
+
+.channel-textarea-autocomplete-inner ul li.active {
+  background: rgba(14,161,182,.25)!important;
+}
+
+.channel-textarea-autocomplete-inner:after {
+  border: none!important
+}
+
+.has-more button {
+  background: rgba(14,161,182,.75)!important;
+  border: none!important;
+  color: white!important;
+}
+
+.divider:not(.divider-red) div, .divider:not(.divider-red) span {
+  background: rgba(0,0,0,.2)!important;
+}
+
+.edit-message .channel-textarea-inner {
+  border-bottom: 2px solid rgb(14,161,182)!important;
+}
