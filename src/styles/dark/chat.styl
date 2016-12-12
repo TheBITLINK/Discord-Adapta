@@ -1,0 +1,100 @@
+/**
+ * Chat (dark variant)
+ */
+
+.new-messages-bar, .jump-to-present-bar {
+  background: alpha(accent-color, 75%)!important
+  left: 0!important
+  right: 0!important
+  border-radius: 0!important
+}
+
+.chat .typing {
+  bottom: -4px
+  padding-left: 4px
+}
+
+.has-more button {
+  background: alpha(accent-color, 75%)!important
+  border: none!important
+  color: white!important
+}
+
+.divider:not(.divider-red) div, .divider:not(.divider-red) span {
+  background: rgba(0,0,0,.2)!important
+}
+
+.divider.divider-red>div {
+  background: accent-color!important
+}
+
+.divider-red>span {
+  color: accent-color!important
+}
+
+// code blocks and embeds
+code, pre, .messages-popout .message-group, .invite-button {
+  background: rgba(0,0,0,.1)!important
+}
+
+pre, .messages-popout .message-group, .invite-button {
+  border-color: rgba(0,0,0,.2)!important
+}
+
+.embed {
+  background: rgba(0,0,0,.05)!important
+  border-color: rgba(0,0,0,.1)!important
+}
+
+// Links
+
+.chat .content a {
+  color: accent-color!important
+}
+
+.highlight:not([style]) {
+  color: accent-color!important
+  background: alpha(accent-color, 10%)!important
+  &:hover {
+    background: alpha(accent-color, 20%)!important
+  }
+}
+
+.message.mentioned .message-text {
+  background: alpha(accent-color, 20%)!important
+  &::after {
+    border-left: 4px solid accent-color!important
+    background: alpha(accent-color, 20%)!important
+  }
+}
+
+// Chat Form
+
+.chat form {
+  border: none!important
+  box-shadow: none!important
+  background: rgba(0,0,0,.2)
+  margin: 0
+}
+
+.channel-textarea {
+  margin-top: 4px
+  margin-bottom: 16px
+
+  .channel-textarea-inner {
+    border: none
+    border-radius: 0
+    background-color: transparent!important
+    .channel-textarea-upload {
+      border-right: none
+    }
+  }
+}
+
+.bot-tag {
+  background: accent-color!important
+}
+
+.edit-message .channel-textarea-inner {
+  border-bottom: 2px solid accent-color!important
+}

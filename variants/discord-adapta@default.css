@@ -1,10 +1,10 @@
 /**
- * Shirasaka Koume Variant
- * by: TheBITLINK
+ * Discord Adapta Theme 1.0
+ * by>thebit.link
  */
 .app.theme-dark {
-  background: #273239 url("https://cdn.discordapp.com/attachments/248274146931245056/255750750439735297/unknown.png") 90% 100% no-repeat !important;
-  background-size: contain !important;
+  background: #273239 no-repeat !important;
+  background-size: bg-size !important;
 }
 .app.theme-dark .channels-wrap,
 .app.theme-dark .chat,

@@ -1,0 +1,32 @@
+/**
+ * Discord Adapta Theme 1.0
+ * by>thebit.link
+ */
+accent-color ?= #0EA1B6
+dark-base ?= #273239
+light-base ?= #FFFFFF
+header-bg ?= #13191C
+small-headers ?= true
+
+bg-image ?= no-repeat
+
+// Dark Theme
+@require '../styles/dark'
+
+// Tooltips
+.tooltip {
+  background-color: accent-color!important
+
+  &.tooltip-left::after {
+    border-left-color: accent-color
+  }
+  &.tooltip-right::after {
+    border-right-color: accent-color
+  }
+  &.tooltip-top::after {
+    border-top-color: accent-color
+  }
+  &.tooltip-bottom::after {
+    border-bottom-color: accent-color
+  }
+}

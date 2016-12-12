@@ -1,0 +1,37 @@
+/**
+ * ¯\_(ツ)_/¯
+ */
+
+.channels-wrap, .chat, .chat .content, .messages-wrapper,
+.divider-red>span, .divider:before, #friends, .friends-table,
+.chat .typing, .channel-text.selected, .private-channels .channel.selected,
+.channel-text:hover, .search-result.selected, .search-result:hover,
+.private-channels .channel:hover, .member:hover, .member.popout-open {
+  background: transparent!important
+}
+
+// Badges
+.badge, .toolbar-badge, .tab-bar-item-primary {
+  box-shadow: none!important
+  background: accent-color!important
+  border-color: header-bg!important
+}
+
+.tab-bar-item-primary .badge {
+  background: header-bg!important
+  color: accent-color!important
+}
+
+// Scrollbars
+.chat .scroller, .friends-table .scroller {
+  &::-webkit-scrollbar-button, &::-webkit-scrollbar-track-piece {
+    background-color: transparent!important
+    border: transparent!important
+  }
+  &::-webkit-scrollbar-button {
+    height: 0!important
+  }
+  &::-webkit-scrollbar-thumb {
+    border-color: transparent!important
+  }
+}

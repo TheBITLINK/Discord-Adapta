@@ -1,0 +1,84 @@
+/**
+ * Sidebars (dark variant)
+ */
+
+.guild-channels, .private-channels {
+  background: alpha(darken(dark-base, 20%), 75%)!important
+}
+
+.channel-text, .private-channels .channel, .search-result, .member {
+  &.selected, &:hover, &.member.popout-open {
+    background: none!important
+  }
+
+  &.selected span {
+    color: lighten(accent-color, 20%)!important
+    &:before {
+      color: alpha(accent-color, 75%)!important
+    }
+  }
+}
+
+.account, #voice-connection {
+  background: alpha(darken(dark-base, 30%), 75%)!important
+  border: none
+
+  // Buttons
+  .btn {
+    background: rgba(0,0,0,.2)
+  }
+
+  .btn-group, .btn, .btn::before, .btn::after {
+    border-color: transparent!important
+    box-shadow: none!important
+  }
+}
+
+.account {
+  height: 62px!important
+}
+
+.channel-members {
+  background: rgba(0,0,0,.2)!important
+}
+
+.new-messages-indicator {
+  font-size: 0!important
+  background: alpha(accent-color, 75%)!important
+
+  span {
+    margin: 0
+  }
+
+  if small-headers {
+    &.new-messages-indicator-channel:not(.bottom) {
+      top: 48px!important
+    }
+  }
+}
+
+// Unread indicators
+
+.guild.unread:not(.selected):before, .channel-text.unread:not(.channel-muted):not(.selected):before,
+.private-channels .channel.unread:not(.channel-muted):not(.selected):before {
+  width: 10px!important
+  height: 10px!important
+  background: accent-color!important
+  box-shadow: 0 0 0 4px alpha(accent-color, 25%)
+}
+
+// Selected indicators
+
+.guild.selected::before {
+  background: accent-color!important
+  width: 9px!important
+  border-radius: 0!important
+}
+
+.channel-text.selected:before, .private-channels .channel.selected:before {
+  border-left-color: accent-color!important
+}
+
+.active .guild-inner, .selected .guild-inner, .guild:hover .guild-inner {
+  background-color: accent-color!important 
+}

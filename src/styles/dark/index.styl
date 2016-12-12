@@ -1,0 +1,20 @@
+/**
+ * Discord-Adapta Dark Variant
+ */
+
+.app.theme-dark {
+  background: dark-base bg-image!important
+  if bg-size {
+    background-size: bg-size!important
+  }
+  @require 'common'
+  @require 'headers'
+  @require 'sidebars'
+  @require 'chat'
+  @require 'friend-list'
+  @require 'popouts'
+}
+
+.theme-dark > .popout {
+  @require 'popouts'
+}
