@@ -125,6 +125,10 @@
   border-color: transparent !important;
 }
 
+.theme-dark .connecting {
+  background: #273239 !important;
+}
+
 .theme-dark .guild-header,
 .theme-dark .guild-header header,
 .theme-dark .title-wrap,
@@ -381,6 +385,15 @@
 
 .theme-dark .friends-row .friends-action {
   background-color: rgba(0,0,0,0.2) !important;
+}
+
+@media screen and (max-width: 720px) {
+  .theme-dark .guilds-wrapper,
+  .theme-dark .channels-wrap,
+  .theme-dark .header-toolbar,
+  .theme-dark .channel-members-wrap {
+    display: none !important;
+  }
 }
 
 .tooltip {
