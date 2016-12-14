@@ -129,6 +129,11 @@
   background: #1e1919 !important;
 }
 
+.theme-dark ::selection {
+  background: rgba(159,44,49,0.5);
+  color: #fff;
+}
+
 .theme-dark .guild-header,
 .theme-dark .guild-header header,
 .theme-dark .title-wrap,
