@@ -14,6 +14,13 @@ header-bg ?= #13191C
 small-headers ?= false
 // If set to true, when the window is <720px in size, only the chat section will be visible.
 responsive ?= true
+// If set to true, the chat form will be overlaying the messages. Though it doesn't look so well.
+// When enabled, it also increases the opacity of the chat form, so it looks even worse with backgrounds.
+// Use at your own risk.
+chat-form-overlay ?= false
+// If set to true, the channel members sidebar will have the same opacity as the chat form when you enable
+// chat-form-overlay. It **might** make everything look less ugly, but ugh
+increased-channel-members-opacity ?= false
 
 bg-image ?= no-repeat
 

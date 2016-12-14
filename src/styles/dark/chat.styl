@@ -77,6 +77,21 @@ pre, .messages-popout .message-group, .invite-button {
   margin: 0
 }
 
+// Chat Form (overlay)
+if chat-form-overlay {
+  .chat form {
+    background: alpha(darken(dark-base, 20%), 90%)!important
+  }
+
+  .messages-wrapper {
+    margin-bottom: -64px;
+  }
+
+  .scroller.messages {
+    padding-bottom: 64px;
+  }
+}
+
 .channel-textarea {
   margin-top: 4px
   margin-bottom: 16px

@@ -30,6 +30,11 @@
   }
   &::-webkit-scrollbar-button {
     height: 0!important
+    if chat-form-overlay {
+      &:end {
+        height: 64px!important
+      }
+    }
   }
   &::-webkit-scrollbar-thumb {
     border-color: transparent!important
