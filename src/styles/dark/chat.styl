@@ -92,6 +92,11 @@ if chat-form-overlay {
   }
 }
 
+// Fix the overlayed dividers bug
+.divider + .divider {
+  opacity: 0!important
+}
+
 .channel-textarea {
   margin-top: 4px
   margin-bottom: 16px
