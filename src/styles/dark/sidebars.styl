@@ -116,3 +116,43 @@ if enable-backdrop {
     background-image: svgurl(embedurl('../../components/member-loading-header.svg')) svg(path fill header-bg)!important
   }
 }
+
+if ripple-effect {
+  .channel-text {
+    position: relative
+    overflow: hidden
+  }
+
+  .channel-text:after {
+    content: ''
+    position: absolute
+    top: 50%
+    left: 10%
+    width: 5px
+    height: 5px
+    background: alpha(accent-color, 50%)
+    opacity: 0
+    border-radius: 100%
+    transform: scale(1, 1) translate(-50%)
+    transform-origin: 50% 50%
+  }
+
+  @keyframes ripple {
+    0% {
+      transform: scale(0, 0)
+      opacity: 1
+    }
+    20% {
+      transform: scale(25, 25)
+      opacity: 1
+    }
+    100% {
+      opacity: 0
+      transform: scale(100, 100)
+    }
+  }
+
+  .channel-text.selected::after {
+    animation: ripple 1s ease-out
+  }
+}
