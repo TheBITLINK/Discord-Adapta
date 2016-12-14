@@ -4,6 +4,9 @@
 
 .guild-channels, .private-channels {
   background: alpha(darken(dark-base, 20%), 75%)!important
+  if enable-backdrop {
+    backdrop-filter: blur(10px)
+  }
 }
 
 .channel-text, .private-channels .channel, .search-result, .member {
@@ -36,13 +39,22 @@
 
 .account {
   height: 62px!important
+  if enable-backdrop {
+    backdrop-filter: blur(5px)
+  }
 }
 
 .channel-members {
-  background: rgba(0,0,0,.2)!important
+  background: alpha(darken(dark-base, 42%), 20%)!important
 
   if increased-channel-members-opacity {
     background: alpha(darken(dark-base, 20%), 90%)!important
+  }
+}
+
+if enable-backdrop {
+  .channel-members-wrap {
+    backdrop-filter: blur(10px)
   }
 }
 

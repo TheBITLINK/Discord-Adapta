@@ -20,3 +20,29 @@
     @require 'responsive'
   }
 }
+
+// Backdrops
+if enable-backdrop {
+  .callout-backdrop {
+    backdrop-filter: blur(5px)
+  }
+}
+
+
+// Tooltips
+.tooltip {
+  background-color: accent-color!important
+
+  &.tooltip-left::after {
+    border-left-color: accent-color
+  }
+  &.tooltip-right::after {
+    border-right-color: accent-color
+  }
+  &.tooltip-top::after {
+    border-top-color: accent-color
+  }
+  &.tooltip-bottom::after {
+    border-bottom-color: accent-color
+  }
+}

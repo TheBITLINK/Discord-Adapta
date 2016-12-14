@@ -4,7 +4,7 @@
  */
 
 .app.theme-dark {
-  background: #273239 url("https://thebit.link/content/images/2016/11/discordbg.png") 85% 100% fixed no-repeat !important;
+  background: #273239 url("https://thebit.link/content/images/2016/11/discordbg.png") 75% 100% fixed no-repeat !important;
   background-size: bg-size !important;
 }
 
@@ -120,6 +120,11 @@
   height: 0 !important;
 }
 
+.theme-dark .chat .scroller::-webkit-scrollbar-button:end,
+.theme-dark .friends-table .scroller::-webkit-scrollbar-button:end {
+  height: 64px !important;
+}
+
 .theme-dark .chat .scroller::-webkit-scrollbar-thumb,
 .theme-dark .friends-table .scroller::-webkit-scrollbar-thumb {
   border-color: transparent !important;
@@ -174,6 +179,7 @@
 .theme-dark .guild-channels,
 .theme-dark .private-channels {
   background: rgba(31,40,46,0.75) !important;
+  backdrop-filter: blur(10px);
 }
 
 .theme-dark .channel-text.selected,
@@ -230,10 +236,15 @@
 
 .theme-dark .account {
   height: 62px !important;
+  backdrop-filter: blur(5px);
 }
 
 .theme-dark .channel-members {
-  background: rgba(0,0,0,0.2) !important;
+  background: rgba(23,29,33,0.2) !important;
+}
+
+.theme-dark .channel-members-wrap {
+  backdrop-filter: blur(10px);
 }
 
 .theme-dark .new-messages-indicator {
@@ -302,6 +313,7 @@
   left: 0 !important;
   right: 0 !important;
   border-radius: 0 !important;
+  backdrop-filter: blur(5px);
 }
 
 .theme-dark .chat .typing {
@@ -371,8 +383,24 @@
 .theme-dark .chat form {
   border: none !important;
   box-shadow: none !important;
-  background: rgba(0,0,0,0.2);
+  background: rgba(23,29,33,0.2) !important;
   margin: 0;
+}
+
+.theme-dark .chat form {
+  background: rgba(27,35,40,0.5) !important;
+}
+
+.theme-dark .messages-wrapper {
+  margin-bottom: -64px;
+}
+
+.theme-dark .scroller.messages {
+  padding-bottom: 64px;
+}
+
+.theme-dark .chat form {
+  backdrop-filter: blur(10px);
 }
 
 .theme-dark .divider + .divider {
@@ -422,6 +450,10 @@
   .theme-dark .channel-members-wrap {
     display: none !important;
   }
+}
+
+.callout-backdrop {
+  backdrop-filter: blur(5px);
 }
 
 .tooltip {

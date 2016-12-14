@@ -7,6 +7,9 @@
   left: 0!important
   right: 0!important
   border-radius: 0!important
+  if enable-backdrop {
+    backdrop-filter: blur(5px)
+  }
 }
 
 .chat .typing {
@@ -73,14 +76,18 @@ pre, .messages-popout .message-group, .invite-button {
 .chat form {
   border: none!important
   box-shadow: none!important
-  background: rgba(0,0,0,.2)
+  background: alpha(darken(dark-base, 42%), 20%)!important
   margin: 0
 }
 
 // Chat Form (overlay)
 if chat-form-overlay {
   .chat form {
-    background: alpha(darken(dark-base, 20%), 90%)!important
+    if enable-backdrop {
+      background: alpha(darken(dark-base, 30%), 50%)!important
+    } else {
+      background: alpha(darken(dark-base, 20%), 90%)!important
+    }
   }
 
   .messages-wrapper {
@@ -89,6 +96,12 @@ if chat-form-overlay {
 
   .scroller.messages {
     padding-bottom: 64px;
+  }
+}
+
+if enable-backdrop {
+  .chat form {
+    backdrop-filter: blur(10px)
   }
 }
 

@@ -21,26 +21,11 @@ chat-form-overlay ?= false
 // If set to true, the channel members sidebar will have the same opacity as the chat form when you enable
 // chat-form-overlay. It **might** make everything look less ugly, but ugh
 increased-channel-members-opacity ?= false
+// Enables Backdrop Filters. (Blur behind certain things). Goes well with chat-form overlay.
+// These will only work if you launch discord with the --enable-experimental-web-platform-features flag (for now)
+enable-backdrop ?= false
 
 bg-image ?= no-repeat
 
 // Dark Theme
 @require '../styles/dark'
-
-// Tooltips
-.tooltip {
-  background-color: accent-color!important
-
-  &.tooltip-left::after {
-    border-left-color: accent-color
-  }
-  &.tooltip-right::after {
-    border-right-color: accent-color
-  }
-  &.tooltip-top::after {
-    border-top-color: accent-color
-  }
-  &.tooltip-bottom::after {
-    border-bottom-color: accent-color
-  }
-}

@@ -213,7 +213,7 @@
 }
 
 .theme-dark .channel-members {
-  background: rgba(0,0,0,0.2) !important;
+  background: rgba(23,29,33,0.2) !important;
 }
 
 .theme-dark .new-messages-indicator {
@@ -347,7 +347,7 @@
 .theme-dark .chat form {
   border: none !important;
   box-shadow: none !important;
-  background: rgba(0,0,0,0.2);
+  background: rgba(23,29,33,0.2) !important;
   margin: 0;
 }
 
