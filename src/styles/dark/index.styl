@@ -7,14 +7,13 @@
   if bg-size {
     background-size: bg-size!important
   }
+}
+
+.theme-dark {
+  @require 'popouts'
   @require 'common'
   @require 'headers'
   @require 'sidebars'
   @require 'chat'
   @require 'friend-list'
-  @require 'popouts'
-}
-
-.theme-dark > .popout {
-  @require 'popouts'
 }

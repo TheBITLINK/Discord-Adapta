@@ -75,10 +75,28 @@
   border-radius: 0!important
 }
 
+.channel-text:hover:before,.private-channels .channel:hover:before {
+  border-left-color: alpha(accent-color, 50%)!important
+}
+
 .channel-text.selected:before, .private-channels .channel.selected:before {
   border-left-color: accent-color!important
 }
 
 .active .guild-inner, .selected .guild-inner, .guild:hover .guild-inner {
   background-color: accent-color!important 
+}
+
+.channel-members-loading {
+  background-color: dark-base!important
+
+  .background {
+    background-image: linear-gradient(90deg, transparent, alpha(accent-color, 30%),transparent)!important
+  }
+  .member {
+    background-image: svgurl(embedurl('../../components/member-loading.svg')) svg(path fill header-bg)!important
+  }
+  .heading {
+    background-image: svgurl(embedurl('../../components/member-loading-header.svg')) svg(path fill header-bg)!important
+  }
 }

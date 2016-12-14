@@ -1,1 +1,0 @@
-stylus -w -o variants src/variants

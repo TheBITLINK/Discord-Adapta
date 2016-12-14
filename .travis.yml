@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "6"
+before_script:
+  - npm install -g stylus svg-stylus
+script:
+  - stylus -u svg-stylus src/variants -o variants
+after_success:
+  - sh ./deploy.sh

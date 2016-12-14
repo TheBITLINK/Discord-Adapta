@@ -7,6 +7,10 @@
   border-bottom: none!important
 }
 
+.themed-popout .footer {
+  background: header-bg!important
+}
+
 .themed-popout, .channel-textarea-autocomplete-inner {
   background: darken(dark-base, 10%)!important
   border: none!important
@@ -28,6 +32,29 @@ code, pre, .messages-popout .message-group, .invite-button {
 
 pre, .messages-popout .message-group, .invite-button {
   border-color: rgba(0,0,0,.2)!important
+}
+
+.messages-popout .message-group .action-buttons {
+  box-shadow: none!important
+  background: none!important
+  
+  .jump-button {
+    background: dark-base!important
+
+    &:hover {
+      background: darken(accent-color, 40%)!important
+    }
+  }
+}
+
+.popout .tab-bar-item {
+  &:hover {
+    border-bottom: 2px solid alpha(accent-color, 25%)!important
+  }
+  &.selected {
+    border-bottom: 2px solid accent-color!important
+    color: accent-color!important
+  }
 }
 
 .embed {
