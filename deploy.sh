@@ -12,6 +12,6 @@ cp variants/discord-adapta@default.css discord-adapta.css
 git checkout master
 git add variants/*
 git add discord-adapta.css
-git commit -m "Auto Build"
+git commit -m "Auto Build [ci skip]"
 
 git push "https://${GITHUB_SECRET_TOKEN}@${GH_REF}" master > /dev/null 2>&1
