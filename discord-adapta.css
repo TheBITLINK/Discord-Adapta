@@ -351,6 +351,10 @@
   margin: 0;
 }
 
+.theme-dark .divider + .divider {
+  opacity: 0 !important;
+}
+
 .theme-dark .channel-textarea {
   margin-top: 4px;
   margin-bottom: 16px;
