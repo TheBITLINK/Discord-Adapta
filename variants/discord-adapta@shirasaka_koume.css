@@ -371,6 +371,11 @@
   border-radius: 0 !important;
 }
 
+.theme-dark .new-messages-bar button:last-child,
+.theme-dark .jump-to-present-bar button:last-child {
+  color: #8ae9f6 !important;
+}
+
 .theme-dark .chat .typing {
   bottom: -4px;
   padding-left: 4px;

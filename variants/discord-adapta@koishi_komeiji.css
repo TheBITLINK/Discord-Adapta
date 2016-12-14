@@ -27,7 +27,7 @@
 }
 
 .theme-dark .channel-textarea-autocomplete-inner ul li.active {
-  background: rgba(14,161,182,0.25) !important;
+  background: rgba(163,177,31,0.25) !important;
 }
 
 .theme-dark .channel-textarea-autocomplete-inner:after {
@@ -57,16 +57,16 @@
 }
 
 .theme-dark .messages-popout .message-group .action-buttons .jump-button:hover {
-  background: #08616d !important;
+  background: #626a13 !important;
 }
 
 .theme-dark .popout .tab-bar-item:hover {
-  border-bottom: 2px solid rgba(14,161,182,0.25) !important;
+  border-bottom: 2px solid rgba(163,177,31,0.25) !important;
 }
 
 .theme-dark .popout .tab-bar-item.selected {
-  border-bottom: 2px solid #0ea1b6 !important;
-  color: #0ea1b6 !important;
+  border-bottom: 2px solid #a3b11f !important;
+  color: #a3b11f !important;
 }
 
 .theme-dark .embed {
@@ -98,13 +98,13 @@
 .theme-dark .toolbar-badge,
 .theme-dark .tab-bar-item-primary {
   box-shadow: none !important;
-  background: #0ea1b6 !important;
+  background: #a3b11f !important;
   border-color: #13191c !important;
 }
 
 .theme-dark .tab-bar-item-primary .badge {
   background: #13191c !important;
-  color: #0ea1b6 !important;
+  color: #a3b11f !important;
 }
 
 .theme-dark .chat .scroller::-webkit-scrollbar-button,
@@ -153,7 +153,7 @@
 .theme-dark .title-wrap button.active,
 .theme-dark .private-channels .search-bar button.active,
 .theme-dark .friends-header button.active {
-  background: #0ea1b6 !important;
+  background: #a3b11f !important;
 }
 
 .theme-dark .guild-header span,
@@ -201,14 +201,14 @@
 .theme-dark .private-channels .channel.selected span,
 .theme-dark .search-result.selected span,
 .theme-dark .member.selected span {
-  color: #16d2ed !important;
+  color: #cbdb31 !important;
 }
 
 .theme-dark .channel-text.selected span:before,
 .theme-dark .private-channels .channel.selected span:before,
 .theme-dark .search-result.selected span:before,
 .theme-dark .member.selected span:before {
-  color: rgba(14,161,182,0.75) !important;
+  color: rgba(163,177,31,0.75) !important;
 }
 
 .theme-dark .account,
@@ -249,7 +249,7 @@
 
 .theme-dark .new-messages-indicator {
   font-size: 0 !important;
-  background: rgba(14,161,182,0.75) !important;
+  background: rgba(163,177,31,0.75) !important;
 }
 
 .theme-dark .new-messages-indicator span {
@@ -265,30 +265,30 @@
 .theme-dark .private-channels .channel.unread:not(.channel-muted):not(.selected):before {
   width: 10px !important;
   height: 10px !important;
-  background: #0ea1b6 !important;
-  box-shadow: 0 0 0 4px rgba(14,161,182,0.25);
+  background: #a3b11f !important;
+  box-shadow: 0 0 0 4px rgba(163,177,31,0.25);
 }
 
 .theme-dark .guild.selected::before {
-  background: #0ea1b6 !important;
+  background: #a3b11f !important;
   width: 9px !important;
   border-radius: 0 !important;
 }
 
 .theme-dark .channel-text:hover:before,
 .theme-dark .private-channels .channel:hover:before {
-  border-left-color: rgba(14,161,182,0.5) !important;
+  border-left-color: rgba(163,177,31,0.5) !important;
 }
 
 .theme-dark .channel-text.selected:before,
 .theme-dark .private-channels .channel.selected:before {
-  border-left-color: #0ea1b6 !important;
+  border-left-color: #a3b11f !important;
 }
 
 .theme-dark .active .guild-inner,
 .theme-dark .selected .guild-inner,
 .theme-dark .guild:hover .guild-inner {
-  background-color: #0ea1b6 !important;
+  background-color: #a3b11f !important;
 }
 
 .theme-dark .channel-members-loading {
@@ -296,7 +296,7 @@
 }
 
 .theme-dark .channel-members-loading .background {
-  background-image: linear-gradient(90deg, transparent, rgba(14,161,182,0.3), transparent) !important;
+  background-image: linear-gradient(90deg, transparent, rgba(163,177,31,0.3), transparent) !important;
 }
 
 .theme-dark .channel-members-loading .member {
@@ -319,7 +319,7 @@
   left: 10%;
   width: 5px;
   height: 5px;
-  background: rgba(14,161,182,0.5);
+  background: rgba(163,177,31,0.5);
   opacity: 0;
   border-radius: 100%;
   transform: scale(1, 1) translate(-50%);
@@ -400,11 +400,16 @@
 
 .theme-dark .new-messages-bar,
 .theme-dark .jump-to-present-bar {
-  background: rgba(14,161,182,0.75) !important;
+  background: rgba(163,177,31,0.75) !important;
   left: 0 !important;
   right: 0 !important;
   border-radius: 0 !important;
   backdrop-filter: blur(5px);
+}
+
+.theme-dark .new-messages-bar button:last-child,
+.theme-dark .jump-to-present-bar button:last-child {
+  color: #e5ed98 !important;
 }
 
 .theme-dark .chat .typing {
@@ -413,7 +418,7 @@
 }
 
 .theme-dark .has-more button {
-  background: rgba(14,161,182,0.75) !important;
+  background: rgba(163,177,31,0.75) !important;
   border: none !important;
   color: #fff !important;
 }
@@ -424,11 +429,11 @@
 }
 
 .theme-dark .divider.divider-red>div {
-  background: #0ea1b6 !important;
+  background: #a3b11f !important;
 }
 
 .theme-dark .divider-red>span {
-  color: #0ea1b6 !important;
+  color: #a3b11f !important;
 }
 
 .theme-dark code,
@@ -450,25 +455,25 @@
 }
 
 .theme-dark .chat .content a {
-  color: #0ea1b6 !important;
+  color: #a3b11f !important;
 }
 
 .theme-dark .highlight:not([style]) {
-  color: #0ea1b6 !important;
-  background: rgba(14,161,182,0.1) !important;
+  color: #a3b11f !important;
+  background: rgba(163,177,31,0.1) !important;
 }
 
 .theme-dark .highlight:not([style]):hover {
-  background: rgba(14,161,182,0.2) !important;
+  background: rgba(163,177,31,0.2) !important;
 }
 
 .theme-dark .message.mentioned .message-text {
-  background: rgba(14,161,182,0.2) !important;
+  background: rgba(163,177,31,0.2) !important;
 }
 
 .theme-dark .message.mentioned .message-text::after {
-  border-left: 4px solid #0ea1b6 !important;
-  background: rgba(14,161,182,0.2) !important;
+  border-left: 4px solid #a3b11f !important;
+  background: rgba(163,177,31,0.2) !important;
 }
 
 .theme-dark .chat form {
@@ -518,11 +523,11 @@
 }
 
 .theme-dark .bot-tag {
-  background: #0ea1b6 !important;
+  background: #a3b11f !important;
 }
 
 .theme-dark .edit-message .channel-textarea-inner {
-  border-bottom: 2px solid #0ea1b6 !important;
+  border-bottom: 2px solid #a3b11f !important;
 }
 
 .theme-dark .friends-row {
@@ -530,7 +535,7 @@
 }
 
 .theme-dark .friends-row:hover {
-  background: rgba(14,161,182,0.25) !important;
+  background: rgba(163,177,31,0.25) !important;
   box-shadow: none !important;
 }
 
@@ -552,21 +557,21 @@
 }
 
 .tooltip {
-  background-color: #0ea1b6 !important;
+  background-color: #a3b11f !important;
 }
 
 .tooltip.tooltip-left::after {
-  border-left-color: #0ea1b6;
+  border-left-color: #a3b11f;
 }
 
 .tooltip.tooltip-right::after {
-  border-right-color: #0ea1b6;
+  border-right-color: #a3b11f;
 }
 
 .tooltip.tooltip-top::after {
-  border-top-color: #0ea1b6;
+  border-top-color: #a3b11f;
 }
 
 .tooltip.tooltip-bottom::after {
-  border-bottom-color: #0ea1b6;
+  border-bottom-color: #a3b11f;
 }
