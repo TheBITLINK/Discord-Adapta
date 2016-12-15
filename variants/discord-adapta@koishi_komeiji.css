@@ -4,7 +4,7 @@
  */
 
 .app.theme-dark {
-  background: #273239 url("https://thebit.link/content/images/2016/11/discordbg.png") 75% 100% fixed no-repeat !important;
+  background: #273239 url("https://thebit.link/content/images/2016/11/discordbg.png") 85% 100% fixed no-repeat !important;
   background-size: bg-size !important;
 }
 
@@ -120,11 +120,6 @@
   height: 0 !important;
 }
 
-.theme-dark .chat .scroller::-webkit-scrollbar-button:end,
-.theme-dark .friends-table .scroller::-webkit-scrollbar-button:end {
-  height: 64px !important;
-}
-
 .theme-dark .chat .scroller::-webkit-scrollbar-thumb,
 .theme-dark .friends-table .scroller::-webkit-scrollbar-thumb {
   border-color: transparent !important;
@@ -184,7 +179,6 @@
 .theme-dark .guild-channels,
 .theme-dark .private-channels {
   background: rgba(31,40,46,0.75) !important;
-  backdrop-filter: blur(10px);
 }
 
 .theme-dark .channel-text.selected,
@@ -218,7 +212,7 @@
 
 .theme-dark .account,
 .theme-dark #voice-connection {
-  background: rgba(27,35,40,0.75) !important;
+  background: rgba(27,35,40,0.7) !important;
   border: none;
 }
 
@@ -241,15 +235,10 @@
 
 .theme-dark .account {
   height: 62px !important;
-  backdrop-filter: blur(5px);
 }
 
 .theme-dark .channel-members {
-  background: rgba(23,29,33,0.2) !important;
-}
-
-.theme-dark .channel-members-wrap {
-  backdrop-filter: blur(10px);
+  background: rgba(20,25,28,0.4) !important;
 }
 
 .theme-dark .new-messages-indicator {
@@ -463,12 +452,14 @@
   color: #a3b11f !important;
 }
 
-.theme-dark .highlight:not([style]) {
+.theme-dark .highlight:not([style]),
+.theme-dark .mention:not([style]) {
   color: #a3b11f !important;
   background: rgba(163,177,31,0.1) !important;
 }
 
-.theme-dark .highlight:not([style]):hover {
+.theme-dark .highlight:not([style]):hover,
+.theme-dark .mention:not([style]):hover {
   background: rgba(163,177,31,0.2) !important;
 }
 
@@ -484,28 +475,8 @@
 .theme-dark .chat form {
   border: none !important;
   box-shadow: none !important;
-  background: rgba(23,29,33,0.2) !important;
+  background: rgba(20,25,28,0.4) !important;
   margin: 0;
-}
-
-.theme-dark .chat form {
-  background: rgba(27,35,40,0.5) !important;
-}
-
-.theme-dark .messages-wrapper {
-  margin-bottom: -64px;
-}
-
-.theme-dark .scroller.messages {
-  padding-bottom: 64px;
-}
-
-.theme-dark .jump-to-present-bar {
-  bottom: 64px !important;
-}
-
-.theme-dark .chat form {
-  backdrop-filter: blur(10px);
 }
 
 .theme-dark .divider + .divider {

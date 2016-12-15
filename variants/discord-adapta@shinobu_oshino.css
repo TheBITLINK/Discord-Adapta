@@ -192,7 +192,7 @@
 
 .theme-dark .account,
 .theme-dark #voice-connection {
-  background: rgba(27,35,40,0.75) !important;
+  background: rgba(27,35,40,0.7) !important;
   border: none;
 }
 
@@ -218,7 +218,7 @@
 }
 
 .theme-dark .channel-members {
-  background: rgba(23,29,33,0.2) !important;
+  background: rgba(20,25,28,0.4) !important;
 }
 
 .theme-dark .new-messages-indicator {
@@ -427,12 +427,14 @@
   color: #0ea1b6 !important;
 }
 
-.theme-dark .highlight:not([style]) {
+.theme-dark .highlight:not([style]),
+.theme-dark .mention:not([style]) {
   color: #0ea1b6 !important;
   background: rgba(14,161,182,0.1) !important;
 }
 
-.theme-dark .highlight:not([style]):hover {
+.theme-dark .highlight:not([style]):hover,
+.theme-dark .mention:not([style]):hover {
   background: rgba(14,161,182,0.2) !important;
 }
 
@@ -448,7 +450,7 @@
 .theme-dark .chat form {
   border: none !important;
   box-shadow: none !important;
-  background: rgba(23,29,33,0.2) !important;
+  background: rgba(20,25,28,0.4) !important;
   margin: 0;
 }
 

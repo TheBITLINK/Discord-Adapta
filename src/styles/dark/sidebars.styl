@@ -4,7 +4,7 @@
 
 .guild-channels, .private-channels {
   background: alpha(darken(dark-base, 20%), 75%)!important
-  if enable-backdrop {
+  if enable-backdrop and enable-backdrop isnt 'modals' {
     backdrop-filter: blur(10px)
   }
 }
@@ -23,7 +23,7 @@
 }
 
 .account, #voice-connection {
-  background: alpha(darken(dark-base, 30%), 75%)!important
+  background: alpha(darken(dark-base, 30%), 70%)!important
   border: none
 
   // Buttons
@@ -39,20 +39,20 @@
 
 .account {
   height: 62px!important
-  if enable-backdrop {
+  if enable-backdrop and enable-backdrop isnt 'modals' {
     backdrop-filter: blur(5px)
   }
 }
 
 .channel-members {
-  background: alpha(darken(dark-base, 42%), 20%)!important
+  background: alpha(darken(dark-base, 50%), 40%)!important
 
   if increased-channel-members-opacity {
     background: alpha(darken(dark-base, 20%), 90%)!important
   }
 }
 
-if enable-backdrop {
+if enable-backdrop and enable-backdrop isnt 'modals' {
   .channel-members-wrap {
     backdrop-filter: blur(10px)
   }

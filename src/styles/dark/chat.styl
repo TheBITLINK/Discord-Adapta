@@ -59,7 +59,7 @@ pre, .messages-popout .message-group, .invite-button {
   color: accent-color!important
 }
 
-.highlight:not([style]) {
+.highlight:not([style]), .mention:not([style]) {
   color: accent-color!important
   background: alpha(accent-color, 10%)!important
   &:hover {
@@ -80,14 +80,14 @@ pre, .messages-popout .message-group, .invite-button {
 .chat form {
   border: none!important
   box-shadow: none!important
-  background: alpha(darken(dark-base, 42%), 20%)!important
+  background: alpha(darken(dark-base, 50%), 40%)!important
   margin: 0
 }
 
 // Chat Form (overlay)
 if chat-form-overlay {
   .chat form {
-    if enable-backdrop {
+    if enable-backdrop and enable-backdrop isnt 'modals' {
       background: alpha(darken(dark-base, 30%), 50%)!important
     } else {
       background: alpha(darken(dark-base, 20%), 90%)!important
@@ -107,7 +107,7 @@ if chat-form-overlay {
   }
 }
 
-if enable-backdrop {
+if enable-backdrop and enable-backdrop isnt 'modals' {
   .chat form {
     backdrop-filter: blur(10px)
   }
