@@ -1,0 +1,72 @@
+.search {
+  .search-bar {
+    background: none!important
+    border-radius: 0
+  }
+
+  &.open {
+    .search-bar {
+      border-bottom: 2px solid dark-base
+    }
+  }
+
+  &.focused {
+    .search-bar {
+      border-bottom: 2px solid accent-color
+    }
+  }
+
+  &:not(.focused):not(.open) {
+    width: 32px!important
+
+    .icon-search-bar-eye-glass {
+      opacity: 0.7!important
+    }
+
+    .search-bar {
+      transition: none!important
+    }
+
+    .search-bar-icon {
+      position: relative
+      left: -112px!important
+      pointer-events: none
+    }
+
+    .public-DraftEditor-content {
+      cursor: pointer!important
+      width: 28px!important
+      position: relative!important
+    }
+
+    .public-DraftEditorPlaceholder-root {
+      display: none!important
+    }
+  }
+
+  if small-headers {
+    .public-DraftEditor-content {
+      margin-top: -6px!important
+      padding-bottom: 12!important 
+    }
+  }
+}
+
+.search-results-wrap {
+  background: alpha(darken(dark-base, 50%), 40%)!important
+
+  // More transparent stuff yay!
+  .channel-name, .search-result::before, .search-result::after, .search-result-message.hit {
+    background: none!important
+  }
+
+  .search-header {
+    background: header-bg!important
+  }
+
+  .search-result-message.hit {
+    background: darken(dark-base, 20%)!important
+    border-color: alpha(accent-color, 75%)!important
+    box-shadow: 0 0 10px 6px alpha(accent-color, 25%);
+  }
+}

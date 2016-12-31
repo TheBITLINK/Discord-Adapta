@@ -11,6 +11,10 @@
     background: accent-color!important
   }
 
+  .topic .aka {
+    background: darken(accent-color, 30%)!important
+  }
+
   if small-headers {
     min-height: 48px!important
     padding-top: 0
@@ -21,8 +25,18 @@
       line-height: 32px!important
     }
 
-    .topic .aka {
-      display: none
+    .topic {
+      align-items: center
+      display: flex!important
+
+      span, a {
+        margin-left: 2px
+        margin-right: 2px
+      }
+
+      a {
+        color: accent-color!important
+      }
     }
   }
 }
