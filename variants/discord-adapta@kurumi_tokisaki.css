@@ -140,6 +140,10 @@
   color: #fff;
 }
 
+.theme-dark .spinner .spinner-item {
+  background: #9f2c31 !important;
+}
+
 .theme-dark .guild-header,
 .theme-dark .guild-header header,
 .theme-dark .title-wrap,
