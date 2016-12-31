@@ -520,20 +520,17 @@
   opacity: 0.7 !important;
 }
 
+.theme-dark .search:not(.focused):not(.open) .search-bar:hover .icon-search-bar-eye-glass {
+  opacity: 0.9 !important;
+}
+
 .theme-dark .search:not(.focused):not(.open) .search-bar {
-  transition: none !important;
+  width: 32px !important;
+  cursor: pointer !important;
 }
 
 .theme-dark .search:not(.focused):not(.open) .search-bar-icon {
-  position: relative;
-  left: -112px !important;
   pointer-events: none;
-}
-
-.theme-dark .search:not(.focused):not(.open) .public-DraftEditor-content {
-  cursor: pointer !important;
-  width: 28px !important;
-  position: relative !important;
 }
 
 .theme-dark .search:not(.focused):not(.open) .public-DraftEditorPlaceholder-root {
