@@ -144,6 +144,10 @@
   background: #a3b11f !important;
 }
 
+.theme-dark .status-typing .spinner .spinner-item {
+  background: #fff !important;
+}
+
 .theme-dark .guild-header,
 .theme-dark .guild-header header,
 .theme-dark .title-wrap,
