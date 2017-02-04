@@ -92,7 +92,8 @@
 .theme-dark .search-result:hover,
 .theme-dark .private-channels .channel:hover,
 .theme-dark .member:hover,
-.theme-dark .member.popout-open {
+.theme-dark .member.popout-open,
+.theme-dark .layers {
   background: transparent !important;
 }
 
