@@ -296,10 +296,6 @@
   margin: 0;
 }
 
-.theme-dark .new-messages-indicator.new-messages-indicator-channel:not(.bottom) {
-  top: 48px !important;
-}
-
 .theme-dark .guild.unread:not(.selected):before,
 .theme-dark .channel-text.unread:not(.channel-muted):not(.selected):before,
 .theme-dark .private-channels .channel.unread:not(.channel-muted):not(.selected):before {
