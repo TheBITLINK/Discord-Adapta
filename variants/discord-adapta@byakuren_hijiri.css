@@ -93,7 +93,8 @@
 .theme-dark .private-channels .channel:hover,
 .theme-dark .member:hover,
 .theme-dark .member.popout-open,
-.theme-dark .layers {
+.theme-dark .layers,
+.theme-dark .layer {
   background: transparent !important;
 }
 
@@ -539,7 +540,8 @@
   border-right: none;
 }
 
-.theme-dark .chat .bot-tag {
+.theme-dark .chat .bot-tag,
+.theme-dark .comment .bot-tag {
   background: #0ea1b6 !important;
 }
 
