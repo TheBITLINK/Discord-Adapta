@@ -258,24 +258,30 @@
 }
 
 .theme-dark .account,
-.theme-dark #voice-connection {
+.theme-dark #voice-connection,
+.theme-dark #rtc-connection {
   background: rgba(27,35,40,0.7) !important;
   border: none;
 }
 
 .theme-dark .account .btn,
-.theme-dark #voice-connection .btn {
+.theme-dark #voice-connection .btn,
+.theme-dark #rtc-connection .btn {
   background: rgba(0,0,0,0.2);
 }
 
 .theme-dark .account .btn-group,
 .theme-dark #voice-connection .btn-group,
+.theme-dark #rtc-connection .btn-group,
 .theme-dark .account .btn,
 .theme-dark #voice-connection .btn,
+.theme-dark #rtc-connection .btn,
 .theme-dark .account .btn::before,
 .theme-dark #voice-connection .btn::before,
+.theme-dark #rtc-connection .btn::before,
 .theme-dark .account .btn::after,
-.theme-dark #voice-connection .btn::after {
+.theme-dark #voice-connection .btn::after,
+.theme-dark #rtc-connection .btn::after {
   border-color: transparent !important;
   box-shadow: none !important;
 }
