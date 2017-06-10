@@ -2,16 +2,33 @@
  * Sidebars (dark variant)
  */
 
-.guild-channels, .private-channels {
+.guild-channels, .flex-lFgbSz:not(.horizontal-2BEEBe), .private-channels {
   background: alpha(darken(dark-base, 20%), 75%)!important
   if enable-backdrop and enable-backdrop isnt 'modals' {
     backdrop-filter: blur(10px)
   }
 }
 
-.channel-text, .private-channels .channel, .search-result, .member {
+.containerDefault-7RImuF, .private-channels .channel, .search-result, .member {
   &.selected, &:hover, &.member.popout-open {
     background: none!important
+  }
+
+  .contentSelectedText-3j5CXt, &.selected a {
+    background: alpha(accent-color, 85%)!important
+    .channel-name { color: white!important }
+  }
+
+  .colorSelectedText-3YhFC6 {
+    fill: white
+  }
+
+  .contentHoveredText-2HYGIY, &:hover:not(.selected) a {
+    background: alpha(accent-color, 25%)!important
+  }
+
+  .channel-activity {
+    color: alpha(white, 50%)
   }
 
   &.selected span {
@@ -22,7 +39,7 @@
   }
 }
 
-.account, #voice-connection, #rtc-connection {
+.account, #voice-connection, #rtc-connection, .container-3lnMWU, .container-iksrDt {
   background: alpha(darken(dark-base, 30%), 70%)!important
   border: none
 
@@ -37,7 +54,7 @@
   }
 }
 
-.account {
+.account, .container-iksrDt {
   height: 62px!important
   if enable-backdrop and enable-backdrop isnt 'modals' {
     backdrop-filter: blur(5px)
@@ -77,6 +94,13 @@ if enable-backdrop and enable-backdrop isnt 'modals' {
   box-shadow: 0 0 0 4px alpha(accent-color, 25%)
 }
 
+.unread-23Kvxk {
+  width: 3px!important
+  height: 6px!important
+  background: accent-color!important
+  box-shadow: 0 0 0 4px alpha(accent-color, 25%)
+}
+
 // Selected indicators
 
 .guild.selected::before {
@@ -112,6 +136,26 @@ if enable-backdrop and enable-backdrop isnt 'modals' {
 }
 
 if ripple-effect {
+  .contentSelectedText-3j5CXt, .private-channels .channel a {
+    position: relative
+    overflow: hidden
+  }
+
+  .contentSelectedText-3j5CXt:after, .private-channels .channel.selected a:after {
+    content: ''
+    position: absolute
+    top: 50%
+    left: 10%
+    width: 5px
+    height: 5px
+    background: alpha(lighten(accent-color, 50%), 50%)
+    opacity: 0
+    border-radius: 100%
+    transform: scale(1, 1) translate(-50%)
+    transform-origin: 50% 50%
+    animation: ripple 1s ease-out
+  }
+
   .channel-text {
     position: relative
     overflow: hidden
