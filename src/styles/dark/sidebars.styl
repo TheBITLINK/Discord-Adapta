@@ -25,10 +25,7 @@
 
   .contentHoveredText-2HYGIY, &:hover:not(.selected) a {
     background: alpha(accent-color, 25%)!important
-  }
-
-  .channel-activity {
-    color: alpha(white, 50%)
+    .channel-name, .nameHoveredText-2FFqiz { color: white!important }
   }
 
   &.selected span {
@@ -37,6 +34,14 @@
       color: alpha(accent-color, 75%)!important
     }
   }
+}
+
+.channel-activity, .member-activity, .nameDefaultText-QoumjC, .nameDefault-Lnjrwm, .nameDefault-1I0lx8, .nameDefaultVoice-1swZoh {
+  color: alpha(white, 50%)!important
+}
+
+.status {
+  border: 2px solid darken(dark-base, 25%)!important
 }
 
 .account, #voice-connection, #rtc-connection, .container-3lnMWU, .container-iksrDt {

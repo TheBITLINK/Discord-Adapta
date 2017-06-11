@@ -42,6 +42,7 @@
 // code blocks and embeds
 code, pre, .messages-popout .message-group, .invite-button {
   background: rgba(0,0,0,.1)!important
+  .hljs { color: alpha(white, 50%) }
 }
 
 pre, .messages-popout .message-group, .invite-button {
@@ -51,6 +52,10 @@ pre, .messages-popout .message-group, .invite-button {
 .embed {
   background: rgba(0,0,0,.05)!important
   border-color: rgba(0,0,0,.1)!important
+}
+
+.embed-color-pill:not([style]) {
+  background-color: lighten(dark-base, 10%)!important
 }
 
 // Links
