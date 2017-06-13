@@ -1,4 +1,7 @@
+**AS OF JUNE 2017, DISCORD ADDED ADDITIONAL (AND UNNECESARY) COMPLEXITY TO ITS CSS, SO I'M ABANDONING THIS THEME. IT MIGHT STILL WORK, BUT SOME THINGS WILL BE BROKEN AND I WILL NOT UPDATE IT ANYMORE**
+
 # Discord-Adapta
+
 BeautifulDiscord theme based on the [Adapta Nokto](https://github.com/adapta-project/adapta-gtk-theme) GTK theme with optional character backgrounds.
 
 ![Screenshot](screenshot.png)
