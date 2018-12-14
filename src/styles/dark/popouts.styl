@@ -1,44 +1,35 @@
 /**
  * Popouts (Dark Variant)
  */
-
-.themed-popout .header, .channel-textarea-autocomplete-inner header {
+[class*='popout-'] [class*='header-'], [class*='queryContainer-'] {
   background: header-bg!important
   border-bottom: none!important
 }
-
-.themed-popout .footer {
+[class*='popout-'] [class*='footer-'] {
   background: header-bg!important
 }
 
-.themed-popout, .channel-textarea-autocomplete-inner {
+[class*='themedPopout-'], [class*='popout-'] [class*='container-'], [class*='resultsGroup-'] [class*='header-'],
+[class*='popout-'] [class*='body-'] {
+  background: darken(dark-base, 10%)!important
+}
+
+[class*='autocomplete-'] {
   background: darken(dark-base, 10%)!important
   border: none!important
   border-radius: 0!important
   border-bottom: 4px solid transparent!important
 }
 
-.channel-textarea-autocomplete-inner ul li.active {
-  background: alpha(accent-color, 25%)!important
+[class*='autocomplete-'] [class*='selectorSelected-'], [class*='searchOption-'][class*='selected-'] {
+  background-color: alpha(accent-color, 25%)!important
 }
 
-.channel-textarea-autocomplete-inner:after {
-  border: none!important
-}
-
-code, pre, .messages-popout .message-group, .invite-button {
-  background: rgba(0,0,0,.1)!important
-}
-
-pre, .messages-popout .message-group, .invite-button {
-  border-color: rgba(0,0,0,.2)!important
-}
-
-.messages-popout .message-group .action-buttons {
+[class*='messagesPopout-'] [class*='actionButtons-'] {
   box-shadow: none!important
   background: none!important
-  
-  .jump-button {
+
+  [class*='jumpButton-'] {
     background: dark-base!important
 
     &:hover {
@@ -47,7 +38,13 @@ pre, .messages-popout .message-group, .invite-button {
   }
 }
 
-.popout .tab-bar-item, .search-header .tab {
+[class*='messagesPopout-'] [class*='messageGroupWrapper-'],
+[class*='messagesPopout-'] [class*='messageGroupWrapper-'] [class*='container-'] {
+  background: darken(dark-base, 20%)!important
+  border: none!important
+}
+
+[class*='popout-'] .tab-bar-item, .search-header .tab {
   &:hover {
     border-bottom: 2px solid alpha(accent-color, 25%)!important
   }
@@ -55,9 +52,4 @@ pre, .messages-popout .message-group, .invite-button {
     border-bottom: 2px solid accent-color!important
     color: accent-color!important
   }
-}
-
-.embed {
-  background: rgba(0,0,0,.05)!important
-  border-color: rgba(0,0,0,.1)!important
 }

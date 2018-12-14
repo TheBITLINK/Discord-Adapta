@@ -1,185 +1,116 @@
 /**
  * Sidebars (dark variant)
  */
-
-.guild-channels, .flex-lFgbSz:not(.horizontal-2BEEBe), .private-channels {
-  background: alpha(darken(dark-base, 20%), 75%)!important
-  if enable-backdrop and enable-backdrop isnt 'modals' {
-    backdrop-filter: blur(10px)
-  }
-}
-
-.containerDefault-7RImuF, .private-channels .channel, .search-result, .member {
-  &.selected, &:hover, &.member.popout-open {
-    background: none!important
+// Channels Sidebar
+[class*='channels-'] {
+  [class*='scrollerWrap-'], [class*='channelNotice-'] {
+    background-color: alpha(darken(dark-base, 20%), 75%)!important
   }
 
-  .contentSelectedText-3j5CXt, &.selected a {
-    background: alpha(accent-color, 85%)!important
-    .channel-name { color: white!important }
-  }
+  // Voice connection and account details
+  > [class*='container-']:nth-last-child(2):not(:first-child),
+  > [class*='container-']:last-child {
+    background: alpha(darken(dark-base, 30%), 70%)!important
+    border: none
 
-  .colorSelectedText-3YhFC6 {
-    fill: white
-  }
-
-  .contentHoveredText-2HYGIY, &:hover:not(.selected) a {
-    background: alpha(accent-color, 25%)!important
-    .channel-name, .nameHoveredText-2FFqiz { color: white!important }
-  }
-
-  &.selected span {
-    color: lighten(accent-color, 20%)!important
-    &:before {
-      color: alpha(accent-color, 75%)!important
+    // Buttons
+    [class*='button-'] {
+      background-color: rgba(0,0,0,.2)
     }
   }
-}
 
-.channel-activity, .member-activity, .nameDefaultText-QoumjC, .nameDefault-Lnjrwm, .nameDefault-1I0lx8, .nameDefaultVoice-1swZoh {
-  color: alpha(white, 50%)!important
-}
-
-.status {
-  border: 2px solid darken(dark-base, 25%)!important
-}
-
-.account, #voice-connection, #rtc-connection, .container-3lnMWU, .container-iksrDt {
-  background: alpha(darken(dark-base, 30%), 70%)!important
-  border: none
-
-  // Buttons
-  .btn {
-    background: rgba(0,0,0,.2)
+  if classic-chat-form {
+    > [class*='container-']:last-child {
+      padding-top: 5px!important
+      padding-bottom: 6px!important
+    }
   }
 
-  .btn-group, .btn, .btn::before, .btn::after {
-    border-color: transparent!important
-    box-shadow: none!important
-  }
-}
-
-.account, .container-iksrDt {
-  height: 62px!important
+  // Backdrop blur
   if enable-backdrop and enable-backdrop isnt 'modals' {
     backdrop-filter: blur(5px)
   }
 }
 
-.channel-members {
-  background: alpha(darken(dark-base, 50%), 40%)!important
+if classic-channel-list {
+  [class*='contentSelectedText-'], [class*='contentHoveredText-'],
+  [class*='channel-'][class*='selected-'] a, [class*='channel-']:hover a {
+    background: transparent!important
+    margin: 1px 0 1px 6px!important
+  }
 
-  if increased-channel-members-opacity {
-    background: alpha(darken(dark-base, 20%), 90%)!important
+  [class*='wrapperSelectedText-'], [class*='channel-'][class*='selected-'] {
+    border-left: 2px solid accent-color
+    padding: 2px 0
+  }
+
+  [class*='wrapperHoveredText-'], [class*='channel-']:not([class*='selected-']):hover {
+    border-left: 2px solid alpha(accent-color, 50%)
+    padding: 2px 0
+  }
+
+  [class*='wrapperDefaultText-'], [class*='wrapperUnreadText-'], [class*='channel-'] {
+    padding: 2px 0
+  }
+
+  if ripple-effect {
+    [class*='wrapperSelectedText-'], [class*='channel-'][class*='selected-'] {
+      position: relative
+      overflow: hidden
+
+      &::after {
+        content: ''
+        position: absolute
+        top: 50%
+        left: 10%
+        width: 5px
+        height: 5px
+        background: alpha(lighten(accent-color, 50%), 50%)
+        opacity: 0
+        border-radius: 100%
+        transform: scale(1, 1) translate(-50%)
+        transform-origin: 50% 50%
+        animation: ripple 500ms linear
+      }
+    }
+  }
+} else {
+  [class*='contentSelectedText'], [class*='channel-'][class*='selected-'] a {
+    background: alpha(accent-color, 50%)!important
+  }
+
+  [class*='contentHoveredText'], [class*='channel-']:not([class*='selected-']):hover a {
+    background: alpha(accent-color, 10%)!important
+  }
+
+  if ripple-effect {
+    [class*='contentSelectedText-'],  [class*='channel-'][class*='selected-'] a {
+      position: relative
+      overflow: hidden
+
+      &::after {
+        content: ''
+        position: absolute
+        top: 50%
+        left: 10%
+        width: 5px
+        height: 5px
+        background: alpha(lighten(accent-color, 50%), 50%)
+        opacity: 0
+        border-radius: 100%
+        transform: scale(1, 1) translate(-50%)
+        transform-origin: 50% 50%
+        animation: ripple 500ms linear
+      }
+    }
   }
 }
 
-if enable-backdrop and enable-backdrop isnt 'modals' {
-  .channel-members-wrap {
-    backdrop-filter: blur(10px)
-  }
-}
-
-.new-messages-indicator {
-  font-size: 0!important
-  background: alpha(accent-color, 75%)!important
-
-  span {
-    margin: 0
-  }
-}
-
-// Unread indicators
-
-.guild.unread:not(.selected):before, .channel-text.unread:not(.channel-muted):not(.selected):before,
-.private-channels .channel.unread:not(.channel-muted):not(.selected):before {
-  width: 10px!important
-  height: 10px!important
-  background: accent-color!important
-  box-shadow: 0 0 0 4px alpha(accent-color, 25%)
-}
-
-.unread-23Kvxk {
-  width: 3px!important
-  height: 6px!important
-  background: accent-color!important
-  box-shadow: 0 0 0 4px alpha(accent-color, 25%)
-}
-
-// Selected indicators
-
-.guild.selected::before {
-  background: accent-color!important
-  width: 9px!important
-  border-radius: 0!important
-}
-
-.channel-text:hover:before,.private-channels .channel:hover:before {
-  border-left-color: alpha(accent-color, 50%)!important
-}
-
-.channel-text.selected:before, .private-channels .channel.selected:before {
-  border-left-color: accent-color!important
-}
-
-.active .guild-inner, .selected .guild-inner, .guild:hover .guild-inner {
-  background-color: accent-color!important 
-}
-
-.channel-members-loading {
-  background-color: dark-base!important
-
-  .background {
-    background-image: linear-gradient(90deg, transparent, alpha(accent-color, 30%),transparent)!important
-  }
-  .member {
-    background-image: svgurl(embedurl('../../components/member-loading.svg')) svg(path fill header-bg)!important
-  }
-  .heading {
-    background-image: svgurl(embedurl('../../components/member-loading-header.svg')) svg(path fill header-bg)!important
-  }
+[class*='nameDefaultText-'] , [class*='nameDefault-'], [class*='nameDefaultVoice-'] {
+  color: alpha(white, 25%)!important
 }
 
 if ripple-effect {
-  .contentSelectedText-3j5CXt, .private-channels .channel a {
-    position: relative
-    overflow: hidden
-  }
-
-  .contentSelectedText-3j5CXt:after, .private-channels .channel.selected a:after {
-    content: ''
-    position: absolute
-    top: 50%
-    left: 10%
-    width: 5px
-    height: 5px
-    background: alpha(lighten(accent-color, 50%), 50%)
-    opacity: 0
-    border-radius: 100%
-    transform: scale(1, 1) translate(-50%)
-    transform-origin: 50% 50%
-    animation: ripple 1s ease-out
-  }
-
-  .channel-text {
-    position: relative
-    overflow: hidden
-  }
-
-  .channel-text:after {
-    content: ''
-    position: absolute
-    top: 50%
-    left: 10%
-    width: 5px
-    height: 5px
-    background: alpha(accent-color, 50%)
-    opacity: 0
-    border-radius: 100%
-    transform: scale(1, 1) translate(-50%)
-    transform-origin: 50% 50%
-  }
-
   @keyframes ripple {
     0% {
       transform: scale(0, 0)
@@ -194,8 +125,49 @@ if ripple-effect {
       transform: scale(100, 100)
     }
   }
+}
 
-  .channel-text.selected::after {
-    animation: ripple 1s ease-out
+// Status indicators
+[class*='status-']:not(.status-text) {
+  border: 2px solid darken(dark-base, 25%)!important
+}
+
+// Members sidebar
+[class*='members-'] {
+  background: alpha(darken(dark-base, 50%), 40%)!important
+
+  if increased-channel-members-opacity {
+    background: alpha(darken(dark-base, 20%), 90%)!important
   }
+
+  if enable-backdrop and enable-backdrop isnt 'modals' {
+    backdrop-filter: blur(10px)
+  }
+}
+
+// "New mentions" indicator.
+[class*='unreadMentionsBar-'], [class*='unreadBar-'] {
+  background: accent-color!important
+}
+
+// Unread indicators
+[class*='guild'][class*='unread']:not([class*='selected']):before {
+  width: 10px!important
+  height: 10px!important
+  background: accent-color!important
+  box-shadow: 0 0 0 4px alpha(accent-color, 25%)
+}
+
+[class*='wrapperUnreadText-'] [class*='unread-'], [class*='wrapperHoveredText-'] [class*='unread-'] {
+  width: 3px!important
+  height: 6px!important
+  background: accent-color!important
+  box-shadow: 0 0 0 4px alpha(accent-color, 25%)
+}
+
+// Selected indicators
+[class*='guild'][class*='selected']::before {
+  background: accent-color!important
+  width: 7px!important
+  border-radius: 0!important
 }

@@ -1,8 +1,7 @@
 /**
  * Chat (dark variant)
  */
-
-.new-messages-bar, .jump-to-present-bar {
+[class*='newMessagesBar-'], [class*='jumpToPresentBar-'] {
   background: alpha(accent-color, 75%)!important
   left: 0!important
   right: 0!important
@@ -16,26 +15,22 @@
   }
 }
 
-.chat .typing {
-  bottom: -4px
-  padding-left: 4px
-}
-
-.has-more button {
+.has-more button { // don't remember what this was
   background: alpha(accent-color, 75%)!important
   border: none!important
   color: white!important
 }
 
-.divider:not(.divider-red) div, .divider:not(.divider-red) span {
-  background: rgba(0,0,0,.2)!important
+[class*='dividerRed-'] {
+  span {
+    color: accent-color!important
+    &::before, &::after {
+      border-color: accent-color!important
+    }
+  }
 }
 
-.divider.divider-red>div {
-  background: accent-color!important
-}
-
-.divider-red>span {
+[class*='markup-'] > a, [class*='embedDescription-'] > a, [class*='embedTitleLink-'], [class*='anchor'] {
   color: accent-color!important
 }
 
@@ -49,22 +44,16 @@ pre, .messages-popout .message-group, .invite-button {
   border-color: rgba(0,0,0,.2)!important
 }
 
-.embed {
+[class*='embedInner-'] {
   background: rgba(0,0,0,.05)!important
   border-color: rgba(0,0,0,.1)!important
 }
 
-.embed-color-pill:not([style]) {
+[class*='embedPill-']:not([style]) {
   background-color: lighten(dark-base, 10%)!important
 }
 
-// Links
-
-.chat .content a {
-  color: accent-color!important
-}
-
-.highlight:not([style]), .mention:not([style]) {
+.mention:not([style]) {
   color: accent-color!important
   background: alpha(accent-color, 10%)!important
   &:hover {
@@ -72,7 +61,7 @@ pre, .messages-popout .message-group, .invite-button {
   }
 }
 
-.message.mentioned .message-text {
+[class*='isMentioned-'] {
   background: alpha(accent-color, 20%)!important
   &::after {
     border-left: 4px solid accent-color!important
@@ -80,67 +69,98 @@ pre, .messages-popout .message-group, .invite-button {
   }
 }
 
-// Chat Form
-
-.chat form {
-  border: none!important
-  box-shadow: none!important
-  background: alpha(darken(dark-base, 50%), 40%)!important
-  margin: 0
-}
-
-// Chat Form (overlay)
-if chat-form-overlay {
-  .chat form {
+if classic-chat-form {
+  [class*='chat'] form {
+    background-color: alpha(darken(dark-base, 50%), 40%) !important
+    margin: 0!important
     if enable-backdrop and enable-backdrop isnt 'modals' {
-      background: alpha(darken(dark-base, 30%), 50%)!important
-    } else {
-      background: alpha(darken(dark-base, 20%), 90%)!important
+      backdrop-filter: blur(10px)
+    }
+  }
+  [class*='channelTextArea-'] {
+    padding-top: 0!important
+    margin-bottom: 20px!important
+    border-top: none
+    [class*='inner-'] {
+      background-color: transparent!important
+    }
+  }
+  [class*='message-'] [class*='channelTextArea-'] [class*='inner-'] {
+    border-bottom: 2px solid accent-color!important
+    border-radius: 0!important
+  }
+
+  // Overlay mode
+  if chat-form-overlay {
+    [class*='messagesWrapper-'] {
+      margin-bottom: -64px
+
+      [class*='messages-'] {
+        padding-bottom: 64px
+      }
+    }
+    [class*='jumpToPresentBar-'] {
+      bottom: 64px!important
+    }
+    [class*='chat-'] form {
+      if enable-backdrop and enable-backdrop isnt 'modals' {
+        background-color: alpha(darken(dark-base, 50%), 40%) !important
+      } else {
+        background-color: alpha(darken(dark-base, 20%), 90%) !important
+      }
+    }
+  }
+} else {
+  [class*='channelTextArea-'] {
+    [class*='inner-'] {
+      if enable-backdrop and enable-backdrop isnt 'modals' {
+        backdrop-filter: blur(10px)
+      }
+      background-color: alpha(darken(dark-base, 50%), 40%) !important
     }
   }
 
-  .messages-wrapper {
-    margin-bottom: -64px;
+  [class*='message-'] [class*='channelTextArea-'] [class*='inner-'] {
+    border-bottom: 2px solid accent-color!important
+    border-radius: 0!important
   }
 
-  .scroller.messages {
-    padding-bottom: 64px;
-  }
+  // Overlay mode
+  if chat-form-overlay {
+    [class*='messagesWrapper-'] {
+      margin-bottom: -94px
 
-  .jump-to-present-bar {
-    bottom: 64px!important
-  }
-}
+      [class*='messages-'] {
+        padding-bottom: 94px
+      }
+    }
 
-if enable-backdrop and enable-backdrop isnt 'modals' {
-  .chat form {
-    backdrop-filter: blur(10px)
-  }
-}
+    [class*='channelTextArea-'] {
+      border-top: none!important
+      [class*='inner-'] {
+        if enable-backdrop and enable-backdrop isnt 'modals' {
+          background-color: alpha(darken(dark-base, 50%), 40%) !important
+        } else {
+          background-color: alpha(darken(dark-base, 20%), 90%) !important
+        }
+      }
+    }
 
-// Fix the overlayed dividers bug
-.divider + .divider {
-  opacity: 0!important
-}
+    [class*='jumpToPresentBar-'] {
+      bottom: 94px!important
+    }
 
-.channel-textarea {
-  margin-top: 4px
-  margin-bottom: 16px
-
-  .channel-textarea-inner {
-    border: none
-    border-radius: 0
-    background-color: transparent!important
-    .channel-textarea-upload {
-      border-right: none
+    [class*='chat-'] form {
+      background: linear-gradient(transparent, dark-base)!important
     }
   }
 }
 
-.chat .bot-tag, .comment .bot-tag {
+[class*='attachButtonDivider-'] {
+  display: none
+}
+
+[class*='botTag-'] {
   background: accent-color!important
 }
 
-.edit-message .channel-textarea-inner {
-  border-bottom: 2px solid accent-color!important
-}

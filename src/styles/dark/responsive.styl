@@ -1,6 +1,6 @@
 /** Show only the chat when the window is too small **/
 @media screen and (max-width: 720px) {
-  .guilds-wrapper, .channels-wrap, .header-toolbar, .channel-members-wrap {
+  [class*='guildsWrapper-'], [class*='channels-'], [class*='membersWrap-'], [class*='headerBar-'] > :last-child {
     display: none!important
   }
 }

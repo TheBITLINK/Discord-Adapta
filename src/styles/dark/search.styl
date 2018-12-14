@@ -67,3 +67,10 @@
     box-shadow: 0 0 10px 6px alpha(accent-color, 25%)
   }
 }
+
+[class*='searchOption-']:after {
+  background: linear-gradient(90deg, transparent, darken(dark-base, 10%) 80%)!important
+}
+[class*='searchFilter-'], [class*='searchAnswer-'] {
+  background: darken(accent-color, 50%)
+}

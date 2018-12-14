@@ -2,49 +2,59 @@
  * ¯\_(ツ)_/¯
  */
 
-.channels-wrap, .chat, .chat .content, .messages-wrapper,
-.divider-red>span, .divider:before, #friends, .friends-table,
-.chat .typing, .channel-text.selected, .private-channels .channel.selected,
-.channel-text:hover, .search-result.selected, .search-result:hover,
-.private-channels .channel:hover, .member:hover, .member.popout-open, .layers, .layer,
-.flex-lFgbSz {
-  background: transparent!important
+// We transparent in this town
+[class*='layer-'] > [class*='container-'], [class*='channels-'], [class*='chat-'],
+[class*='messagesWrapper-'], [class*='headerBar-'], [class*='layers-'], [class*='layer-'],
+#friends, .friends-table
+{
+  background: transparent !important
+}
+
+[class*='chat-'] {
+  [class*='content-'],  [class*='typing-'], form {
+    background: transparent !important
+  }
 }
 
 // Badges
-.badge, .toolbar-badge, .tab-bar-item-primary, .wrapper-2xO9RX {
-  box-shadow: none!important
-  background: accent-color!important
-  border-color: header-bg!important
+[class*='iconBadge-'], [class*='badge-'], .tab-bar-item > [class*='wrapper-'], .tab-bar-item-primary,
+[href='/channels/@me'] [class*='wrapper-'], [class*='contentUnreadText-'] [class*='wrapper-'],
+[class*='contentHoveredText-'] [class*='wrapper-']
+{
+  box-shadow: none !important
+  background: accent-color !important
+  border-color: header-bg !important
 }
 
 .tab-bar-item-primary .badge {
-  background: header-bg!important
-  color: accent-color!important
+  background: header-bg !important
+  color: accent-color !important
 }
 
 // Scrollbars
-.chat .scroller, .friends-table .scroller, .search-results-wrap .scroller {
+[class*='scroller'] {
   &::-webkit-scrollbar-button, &::-webkit-scrollbar-track-piece {
-    background-color: transparent!important
-    border: transparent!important
+    background-color: transparent !important
+    border: transparent !important
   }
+
   &::-webkit-scrollbar-button {
-    height: 0!important
+    height: 0 !important
     if chat-form-overlay {
       &:end {
-        height: 64px!important
+        height: 64px !important
       }
     }
   }
+
   &::-webkit-scrollbar-thumb {
-    border-color: transparent!important
+    border-color: transparent !important
   }
 }
 
 // Load screen
 .connecting {
-  background: dark-base!important
+  background: dark-base !important
 }
 
 // Selected text
@@ -55,10 +65,10 @@
 
 // Spinners
 .spinner .spinner-item {
-  background: accent-color!important
+  background: accent-color !important
 }
 
 // Typing
 .status-typing .spinner .spinner-item {
-  background: white!important
+  background: white !important
 }
