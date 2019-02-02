@@ -1,16 +1,18 @@
 /**
  * Sidebars (dark variant)
  */
+base-sidebar-background = alpha(darken(dark-base, 50% - (30% * bg-opacity)), 40% + (60% * (1 - bg-opacity)))
+
 // Channels Sidebar
 [class*='channels-'] {
   [class*='scrollerWrap-'], [class*='channelNotice-'] {
-    background-color: alpha(darken(dark-base, 20%), 75%)!important
+    background-color: alpha(base-sidebar-background, 80%)!important
   }
 
   // Voice connection and account details
   > [class*='container-']:nth-last-child(2):not(:first-child),
   > [class*='container-']:last-child {
-    background: alpha(darken(dark-base, 30%), 70%)!important
+    background: alpha(base-sidebar-background, 90%)!important
     border: none
 
     // Buttons
@@ -134,7 +136,7 @@ if ripple-effect {
 
 // Members sidebar
 [class*='members-'] {
-  background: alpha(darken(dark-base, 50%), 40%)!important
+  background: base-sidebar-background!important
 
   if increased-channel-members-opacity {
     background: alpha(darken(dark-base, 20%), 90%)!important

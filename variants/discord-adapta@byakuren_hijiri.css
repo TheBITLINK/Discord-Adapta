@@ -74,6 +74,7 @@
 .theme-dark [class*='headerBar-'],
 .theme-dark [class*='layers-'],
 .theme-dark [class*='layer-'],
+.theme-dark [class*='channels-'] > [class*='container-'],
 .theme-dark #friends,
 .theme-dark .friends-table {
   background: transparent !important;
@@ -208,12 +209,12 @@
 
 .theme-dark [class*='channels-'] [class*='scrollerWrap-'],
 .theme-dark [class*='channels-'] [class*='channelNotice-'] {
-  background-color: rgba(31,40,46,0.75) !important;
+  background-color: rgba(20,25,28,0.8) !important;
 }
 
 .theme-dark [class*='channels-'] > [class*='container-']:nth-last-child(2):not(:first-child),
 .theme-dark [class*='channels-'] > [class*='container-']:last-child {
-  background: rgba(27,35,40,0.7) !important;
+  background: rgba(20,25,28,0.9) !important;
   border: none;
 }
 
@@ -333,7 +334,7 @@
 }
 
 .theme-dark [class*='members-'] {
-  background: rgba(20,25,28,0.4) !important;
+  background: #14191c !important;
 }
 
 .theme-dark [class*='unreadMentionsBar-'],
@@ -459,6 +460,10 @@
 
 .theme-dark [class*='botTag-'] {
   background: #0ea1b6 !important;
+}
+
+.theme-dark [class*='messagesWrapper-'] {
+  background: #273239 !important;
 }
 
 .theme-dark .search .search-bar {

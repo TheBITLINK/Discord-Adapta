@@ -152,6 +152,12 @@ if classic-chat-form {
 
     [class*='chat-'] form {
       background: linear-gradient(transparent, dark-base)!important
+      margin: 0
+      padding: 0 20px
+    }
+
+    [class*='typing'] {
+      margin: 0 20px
     }
   }
 }
@@ -164,3 +170,6 @@ if classic-chat-form {
   background: accent-color!important
 }
 
+[class*='messagesWrapper-'] {
+  background: alpha(dark-base, 1 - bg-opacity)!important
+}

@@ -74,6 +74,7 @@
 .theme-dark [class*='headerBar-'],
 .theme-dark [class*='layers-'],
 .theme-dark [class*='layer-'],
+.theme-dark [class*='channels-'] > [class*='container-'],
 .theme-dark #friends,
 .theme-dark .friends-table {
   background: transparent !important;
@@ -110,6 +111,10 @@
 
 .theme-dark [class*='scroller']::-webkit-scrollbar-button {
   height: 0 !important;
+}
+
+.theme-dark [class*='scroller']::-webkit-scrollbar-button:end {
+  height: 64px !important;
 }
 
 .theme-dark [class*='scroller']::-webkit-scrollbar-thumb {
@@ -163,14 +168,18 @@
   background: #13191c !important;
 }
 
+.theme-dark [class*='channels-'] {
+  backdrop-filter: blur(5px);
+}
+
 .theme-dark [class*='channels-'] [class*='scrollerWrap-'],
 .theme-dark [class*='channels-'] [class*='channelNotice-'] {
-  background-color: rgba(31,40,46,0.75) !important;
+  background-color: rgba(255,255,255,0.8) !important;
 }
 
 .theme-dark [class*='channels-'] > [class*='container-']:nth-last-child(2):not(:first-child),
 .theme-dark [class*='channels-'] > [class*='container-']:last-child {
-  background: rgba(27,35,40,0.7) !important;
+  background: rgba(255,255,255,0.9) !important;
   border: none;
 }
 
@@ -290,7 +299,8 @@
 }
 
 .theme-dark [class*='members-'] {
-  background: rgba(20,25,28,0.4) !important;
+  background: rgba(255,255,255,0) !important;
+  backdrop-filter: blur(10px);
 }
 
 .theme-dark [class*='unreadMentionsBar-'],
@@ -325,6 +335,7 @@
   left: 0 !important;
   right: 0 !important;
   border-radius: 0 !important;
+  backdrop-filter: blur(5px);
 }
 
 .theme-dark [class*='newMessagesBar-'] button:last-child,
@@ -402,6 +413,7 @@
 }
 
 .theme-dark [class*='channelTextArea-'] [class*='inner-'] {
+  backdrop-filter: blur(10px);
   background-color: rgba(20,25,28,0.4) !important;
 }
 
@@ -410,12 +422,46 @@
   border-radius: 0 !important;
 }
 
+.theme-dark [class*='messagesWrapper-'] {
+  margin-bottom: -94px;
+}
+
+.theme-dark [class*='messagesWrapper-'] [class*='messages-'] {
+  padding-bottom: 94px;
+}
+
+.theme-dark [class*='channelTextArea-'] {
+  border-top: none !important;
+}
+
+.theme-dark [class*='channelTextArea-'] [class*='inner-'] {
+  background-color: rgba(20,25,28,0.4) !important;
+}
+
+.theme-dark [class*='jumpToPresentBar-'] {
+  bottom: 94px !important;
+}
+
+.theme-dark [class*='chat-'] form {
+  background: linear-gradient(transparent, #273239) !important;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.theme-dark [class*='typing'] {
+  margin: 0 20px;
+}
+
 .theme-dark [class*='attachButtonDivider-'] {
   display: none;
 }
 
 .theme-dark [class*='botTag-'] {
   background: #a3b11f !important;
+}
+
+.theme-dark [class*='messagesWrapper-'] {
+  background: rgba(39,50,57,0) !important;
 }
 
 .theme-dark .search .search-bar {
